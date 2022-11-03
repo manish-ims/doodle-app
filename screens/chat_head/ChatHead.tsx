@@ -6,12 +6,8 @@ import {
   GestureHandlerRootView,
 } from 'react-native-gesture-handler';
 import Animated, {useSharedValue} from 'react-native-reanimated';
-import {
-  CIRCLE_RADIUS,
-  CIRCLE_SIZE,
-  SCREEN_HEIGHT,
-  SCREEN_WIDTH,
-} from './constants/constants';
+import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../constants/constants';
+import {CIRCLE_RADIUS, CIRCLE_SIZE} from './constants/constants';
 import {useFollowAnimatedStyle} from './hooks/useFollowAnimatedStyle';
 
 const ChatHeadScreen = () => {
