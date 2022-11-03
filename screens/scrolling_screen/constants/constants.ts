@@ -1,1 +1,1 @@
-export const WORDS = ['Hello', 'React Native', 'Developers', "What's up?"];
+export const WORDS = ['Hello', 'React Native', 'Devs,', "What's up?"];

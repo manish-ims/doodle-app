@@ -1,8 +1,8 @@
 import React from 'react';
-import ChatHeadScreen from './screens/chat_head/ChatHead';
+import ScrollingScreen from './screens/scrolling_screen/ScrollingScreen';
 
 const App = () => {
-  return <ChatHeadScreen />;
+  return <ScrollingScreen />;
 };
 
 export default App;
