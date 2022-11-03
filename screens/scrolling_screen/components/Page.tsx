@@ -1,15 +1,15 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React, {FC} from 'react';
-import {
-  SCREEN_HEIGHT,
-  SCREEN_WIDTH,
-  STATUS_BAR_HEIGHT,
-} from '../../constants/constants';
+import {StyleSheet, View} from 'react-native';
 import Animated, {
   Extrapolate,
   interpolate,
   useAnimatedStyle,
 } from 'react-native-reanimated';
+import {
+  SCREEN_HEIGHT,
+  SCREEN_WIDTH,
+  STATUS_BAR_HEIGHT,
+} from '../../constants/constants';
 
 type Props = {
   title: string;
