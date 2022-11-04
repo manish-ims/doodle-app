@@ -9,7 +9,7 @@ import {
   SCREEN_HEIGHT,
   SCREEN_WIDTH,
   STATUS_BAR_HEIGHT,
-} from '../../constants/constants';
+} from '../../../constants/constants';
 
 type Props = {
   title: string;

@@ -1,8 +1,13 @@
+import {NavigationContainer} from '@react-navigation/native/';
 import React from 'react';
-import ScrollingScreen from './screens/scrolling_screen/ScrollingScreen';
+import DrawerStack from './src/navigation/DrawerStack';
 
 const App = () => {
-  return <ScrollingScreen />;
+  return (
+    <NavigationContainer>
+      <DrawerStack />
+    </NavigationContainer>
+  );
 };
 
 export default App;

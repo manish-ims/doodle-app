@@ -6,7 +6,11 @@ import {
   GestureHandlerRootView,
 } from 'react-native-gesture-handler';
 import Animated, {useSharedValue} from 'react-native-reanimated';
-import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../constants/constants';
+import {
+  SCREEN_HEIGHT,
+  SCREEN_WIDTH,
+  STATUS_BAR_HEIGHT,
+} from '../../constants/constants';
 import {CIRCLE_RADIUS, CIRCLE_SIZE} from './constants/constants';
 import {useFollowAnimatedStyle} from './hooks/useFollowAnimatedStyle';
 
@@ -31,9 +35,9 @@ const ChatHeadScreen = () => {
       }
 
       if (translateY.value > SCREEN_HEIGHT - CIRCLE_SIZE) {
-        translateY.value = SCREEN_HEIGHT - (CIRCLE_SIZE + 10);
-      } else if (translateY.value < 10) {
-        translateY.value = 10;
+        translateY.value = SCREEN_HEIGHT - (CIRCLE_RADIUS + 10);
+      } else if (translateY.value < 10 + STATUS_BAR_HEIGHT) {
+        translateY.value = 10 + STATUS_BAR_HEIGHT;
       }
     });
 
@@ -52,7 +56,7 @@ const ChatHeadScreen = () => {
 
   return (
     <>
-      <StatusBar backgroundColor={'#fff'} />
+      <StatusBar backgroundColor={'transparent'} translucent />
       <GestureHandlerRootView style={styles.container}>
         <Animated.View
           style={[styles.circle, rRStyle, {backgroundColor: 'red'}]}
@@ -75,6 +79,7 @@ export default ChatHeadScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
   },
 
   circle: {

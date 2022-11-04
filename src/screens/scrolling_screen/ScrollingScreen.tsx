@@ -1,4 +1,4 @@
-import {StyleSheet, StatusBar, Text, View} from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 import React from 'react';
 import Animated, {
   useAnimatedScrollHandler,
