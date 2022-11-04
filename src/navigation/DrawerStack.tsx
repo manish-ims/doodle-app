@@ -11,14 +11,14 @@ const DrawerStack = () => {
   return (
     <Navigator screenOptions={{headerShown: false}}>
       <Screen
-        name="pinch_kaisa_screen"
-        options={{title: 'Pinch Kaisa'}}
-        component={PinchKaisaScreen}
-      />
-      <Screen
         name="theme_changer_screen"
         options={{title: 'Theme Changer'}}
         component={ThemeChangerScreen}
+      />
+      <Screen
+        name="pinch_kaisa_screen"
+        options={{title: 'Pinch Kaisa'}}
+        component={PinchKaisaScreen}
       />
       <Screen
         name="chat_head_screen"
