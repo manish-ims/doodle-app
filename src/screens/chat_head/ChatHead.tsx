@@ -1,5 +1,5 @@
 import React from 'react';
-import {StatusBar, StyleSheet} from 'react-native';
+import {StatusBar, Text, StyleSheet} from 'react-native';
 import {
   Gesture,
   GestureDetector,
@@ -15,7 +15,7 @@ import {CIRCLE_RADIUS, CIRCLE_SIZE} from './constants/constants';
 import {useFollowAnimatedStyle} from './hooks/useFollowAnimatedStyle';
 
 const ChatHeadScreen = () => {
-  const translateX = useSharedValue(10);
+  const translateX = useSharedValue(SCREEN_WIDTH - (CIRCLE_SIZE + 10));
   const translateY = useSharedValue(STATUS_BAR_HEIGHT + 10);
   const context = useSharedValue({x: 0, y: 0});
 
@@ -58,6 +58,7 @@ const ChatHeadScreen = () => {
     <>
       <StatusBar backgroundColor={'transparent'} translucent />
       <GestureHandlerRootView style={styles.container}>
+        <Text style={styles.text}>{`<<`} Swipe to open the drawer</Text>
         <Animated.View
           style={[styles.circle, rRStyle, {backgroundColor: 'red'}]}
         />
@@ -80,6 +81,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+
+  text: {
+    marginLeft: 20,
+    marginTop: STATUS_BAR_HEIGHT + 15,
   },
 
   circle: {
