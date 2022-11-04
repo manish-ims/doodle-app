@@ -16,7 +16,7 @@ import {useFollowAnimatedStyle} from './hooks/useFollowAnimatedStyle';
 
 const ChatHeadScreen = () => {
   const translateX = useSharedValue(10);
-  const translateY = useSharedValue(10);
+  const translateY = useSharedValue(STATUS_BAR_HEIGHT + 10);
   const context = useSharedValue({x: 0, y: 0});
 
   const gesture = Gesture.Pan()
