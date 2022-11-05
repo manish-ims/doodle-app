@@ -3,4 +3,5 @@ export type DrawerStackParams = {
   scrolling_screen: undefined;
   pinch_kaisa_screen: undefined;
   theme_changer_screen: undefined;
+  insta_like_screen: undefined;
 };
