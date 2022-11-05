@@ -92,7 +92,7 @@ export default PinchKaisaScreen;
 
 const styles = StyleSheet.create({
   image: {
-    height: SCREEN_HEIGHT + STATUS_BAR_HEIGHT,
+    height: SCREEN_HEIGHT + STATUS_BAR_HEIGHT! + 50,
     width: SCREEN_WIDTH,
   },
 });

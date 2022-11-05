@@ -1,11 +1,11 @@
-import {StyleSheet, StatusBar} from 'react-native';
 import React from 'react';
+import {StatusBar} from 'react-native';
 import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from 'react-native-reanimated';
-import {WORDS} from './constants/constants';
 import Page from './components/Page';
+import {WORDS} from './constants/constants';
 
 const ScrollingScreen = () => {
   const translateX = useSharedValue(0);
@@ -37,5 +37,3 @@ const ScrollingScreen = () => {
 };
 
 export default ScrollingScreen;
-
-const styles = StyleSheet.create({});

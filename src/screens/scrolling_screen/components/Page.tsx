@@ -83,7 +83,7 @@ export default Page;
 
 const styles = StyleSheet.create({
   container: {
-    height: SCREEN_HEIGHT + STATUS_BAR_HEIGHT,
+    height: SCREEN_HEIGHT + STATUS_BAR_HEIGHT + 50,
     width: SCREEN_WIDTH,
     justifyContent: 'center',
     alignItems: 'center',
